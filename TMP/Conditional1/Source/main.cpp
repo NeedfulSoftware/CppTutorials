@@ -20,9 +20,23 @@
     IN THE SOFTWARE.
 */
 
+#include <type_traits>
 #include <iostream>
 
 int main(int argc, char* argv[])
 {
+    // The std::conditional takes 3 arguments and produces a type
+    // The first argument is a bool and the 2 other ones are types.
+    // - If the first argument is true then the produced type is the second argument
+    // - If the first argument is false then the produced type is the thrid argument.
+    // You can see this is similar to an if/else statement. The first argument
+    // is the condition, the second one the if clause and the third one the else clause.
+
+    std::conditional<true, std::true_type, std::false_type>::type type1;
+    std::cout << std::boolalpha << "type1 is " << type1.value << std::endl;
+
+    std::conditional<false, std::true_type, std::false_type>::type type2;
+    std::cout << std::boolalpha << "type2 is " << type2.value << std::endl;
+
     return 0;
 }
