@@ -22,7 +22,22 @@
 
 #include <iostream>
 
+template<int n>
+void printN()
+{
+    std::cout << "Iteration " << n << std::endl;
+    printN<n-1>();
+}
+
+template<>
+void printN<0>()
+{
+    std::cout << "Last iteration" << std::endl;
+}
+
 int main(int argc, char* argv[])
 {
+    printN<3>();
+
     return 0;
 }
