@@ -22,7 +22,15 @@
 
 #include <iostream>
 
-int main(int argc, char* argv[])
+template<bool v>
+class BooleanType
 {
-    return 0;
+public:
+    static const bool value = v;
+};
+
+int main()
+{
+    std::cout << std::boolalpha << BooleanType<true>::value << std::endl;
+    std::cout << std::boolalpha << BooleanType<false>::value << std::endl;
 }
