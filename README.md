@@ -1,5 +1,9 @@
 # NeedfulSoftware - C++ Tutorials
 
+This repository contains the examples for our [C++ tutorials](http://www.needfulsoftware.com/Cpp).
+
+## List of examples
+
 ## License
 
 Copyright (c) 2019 Xavier Leclercq
