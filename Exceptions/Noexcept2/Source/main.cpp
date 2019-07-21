@@ -78,7 +78,8 @@ int main(int argc, char* argv[])
 
     // Create a vector of 3 elements that don't have a noexcept move constructor and resize it
     std::cout << "2a) Create a vector of 3 elements that do not have a noexcept move constructor" << std::endl;
-    std::vector<ItemWithoutNoExceptMove> v2 = { ItemWithoutNoExceptMove(), ItemWithoutNoExceptMove(), ItemWithoutNoExceptMove() };
+    std::vector<ItemWithoutNoExceptMove> v2 = { ItemWithoutNoExceptMove(), ItemWithoutNoExceptMove(),
+        ItemWithoutNoExceptMove() };
     std::cout << "2b) Resize the vector" << std::endl;
     v2.resize(100);
 
