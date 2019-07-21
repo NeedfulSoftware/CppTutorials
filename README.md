@@ -4,6 +4,13 @@ This repository contains the examples for our [C++ tutorials](http://www.needful
 
 ## List of examples
 
+### Exceptions
+
+- [Noexcept1](https://github.com/NeedfulSoftware/CppTutorials/tree/master/Exceptions/Noexcept1): Example showing how to declare that a function doesn't throw exception
+  and what happens if that declaration is violated.
+- [Noexcept2](https://github.com/NeedfulSoftware/CppTutorials/tree/master/Exceptions/Noexcept2): Example showing how std::vector can make use of move constructor declared
+  as noexcept.
+
 ## License
 
 Copyright (c) 2019 Xavier Leclercq
