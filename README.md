@@ -17,6 +17,12 @@ This repository contains the examples for our [C++ tutorials](http://www.needful
 
 ### Template metaprogramming
 
+- [Introduction1](https://github.com/NeedfulSoftware/CppTutorials/tree/master/TMP/Introduction1)
+- [Introduction2](https://github.com/NeedfulSoftware/CppTutorials/tree/master/TMP/Introduction2)
+- [Recursion1](https://github.com/NeedfulSoftware/CppTutorials/tree/master/TMP/Recursion1)
+- [Recursion2](https://github.com/NeedfulSoftware/CppTutorials/tree/master/TMP/Recursion2)
+- [Conditional1](https://github.com/NeedfulSoftware/CppTutorials/tree/master/TMP/Conditional1)
+
 ## License
 
 Copyright (c) 2019 Xavier Leclercq
