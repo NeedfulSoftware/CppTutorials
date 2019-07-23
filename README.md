@@ -11,6 +11,10 @@ This repository contains the examples for our [C++ tutorials](http://www.needful
 - [Noexcept2](https://github.com/NeedfulSoftware/CppTutorials/tree/master/Exceptions/Noexcept2): Example showing how std::vector can make use of a move constructor declared
   as noexcept.
 
+### constexpr
+
+- [Constexpr1](https://github.com/NeedfulSoftware/CppTutorials/tree/master/Constexpr/Constexpr1): Example showing the basics of constexpr functions.
+
 ### Template metaprogramming
 
 ## License
