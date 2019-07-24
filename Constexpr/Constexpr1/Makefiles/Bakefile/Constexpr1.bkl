@@ -1,11 +1,11 @@
 toolsets = gnu vs2017 vs2015 vs2013;
 
 gnu.makefile = ../GNUmakefile/GNUmakefile;
-vs2017.solutionfile = ../VC15/TypeConversions1.sln;
-vs2015.solutionfile = ../VC14/TypeConversions1.sln;
-vs2013.solutionfile = ../VC12/TypeConversions1.sln;
+vs2017.solutionfile = ../VC15/Constexpr1.sln;
+vs2015.solutionfile = ../VC14/Constexpr1.sln;
+vs2013.solutionfile = ../VC12/Constexpr1.sln;
 
-program TypeConversions1
+program Constexpr1
 {
     archs = x86 x86_64;
 
