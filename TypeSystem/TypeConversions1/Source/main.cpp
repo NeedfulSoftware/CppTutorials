@@ -23,22 +23,11 @@
 #include <iostream>
 
 // A simple class that encapsulates an int.
-// Each function prints a message when called so that we can confirm which ones
-// are called and which ones aren't.
 class A
 {
 public:
     // Converting constructor
     A(int n);
-
-    // Copy constructor
-    A(const A& other);
-
-    // Move constructor
-    A(A&& other);
-
-    // Assignment operator
-    A& operator=(const A& other);
 
     // User-defined conversion function
     operator int() const;
@@ -50,30 +39,12 @@ private:
 A::A(int n)
     : m_data(n)
 {
-    std::cout << "A::A(int n) called with n=" << n << std::endl;
-}
-
-A::A(const A& other)
-    : m_data(other.m_data)
-{
-    std::cout << "A::A(const A& other) called with other.m_data=" << other.m_data << std::endl;
-}
-
-A::A(A&& other)
-    : m_data(other.m_data)
-{
-    std::cout << "A::A(A&& other) called with other.m_data=" << other.m_data << std::endl;
-}
-
-A& A::operator=(const A& other)
-{
-    std::cout << "A::operator=(const A& other) called with other.m_data=: " << other.m_data << std::endl;
-    return *this;
+    std::cout << "    A::A(int n) called with n=" << n << std::endl;
 }
 
 A::operator int() const
 {
-    std::cout << "A::operator int() const called with m_data=" << m_data << std::endl;
+    std::cout << "    A::operator int() const called with m_data=" << m_data << std::endl;
     return m_data;
 }
 
@@ -82,38 +53,26 @@ int main(int argc, char* argv[])
     // The 3 expressions below are equivalent and will call the A::A(int n) constructor
 
     std::cout << "A(1): " << std::endl;
-    // Explicit type conversion (functional notation)
     A(1);
-    std::cout << std::endl;
 
-    std::cout << "(A)2: " << std::endl;
-    // Explicit type conversion (cast notation)
+    std::cout << "\n(A)2: " << std::endl;
     (A)2;
-    std::cout << std::endl;
-
-    std::cout << "static_cast<A>(3): " << std::endl;
-    // Explicit type conversion (static_cast)
+    
+    std::cout << "\nstatic_cast<A>(3): " << std::endl;
     static_cast<A>(3);
-    std::cout << std::endl;
-
+ 
 
     // The 3 expressions below are equivalent and will call the A::int() function
     // (after a call to A::A(int n) to construct the instance of A)
 
-    std::cout << "(int)A(4): " << std::endl;
-    // Explicit type conversion (functional notation)
+    std::cout << "\n(int)A(4): " << std::endl;
     (int)A(4);
-    std::cout << std::endl;
-
-    std::cout << "int(A(5)): " << std::endl;
-    // Explicit type conversion (cast notation)
+    
+    std::cout << "\nint(A(5)): " << std::endl;
     int(A(5));
-    std::cout << std::endl;
 
-    std::cout << "static_cast<int>(A(6)): " << std::endl;
-    // Explicit type conversion (static_cast)
+    std::cout << "\nstatic_cast<int>(A(6)): " << std::endl;
     static_cast<int>(A(6));
-    std::cout << std::endl;
-
+    
     return 0;
 }
